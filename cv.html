@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nicholas Goulart — Full-Stack Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4/dist/full.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .skill-pill { transition: transform 0.15s ease, box-shadow 0.15s ease; }
+    .skill-pill:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+    .project-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .project-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+    .exp-line { border-left: 3px solid; }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white !important; }
+      .card { box-shadow: none !important; border: 1px solid #e5e7eb !important; }
+    }
+  </style>
+</head>
+<body class="bg-base-200 min-h-screen">
+
+  <!-- ── NAVBAR ───────────────────────────────────────────────── -->
+  <nav class="navbar bg-base-100 shadow-md sticky top-0 z-50 no-print px-4 md:px-8">
+    <div class="navbar-start">
+      <span class="text-xl font-extrabold tracking-tight">
+        <span class="text-primary">NG</span><span class="text-base-content">Dev</span>
+      </span>
+    </div>
+    <div class="navbar-center hidden md:flex">
+      <ul class="menu menu-horizontal gap-1 text-sm">
+        <li><a href="#sobre" class="rounded-lg">Sobre</a></li>
+        <li><a href="#experiencia" class="rounded-lg">Experiência</a></li>
+        <li><a href="#projetos" class="rounded-lg">Projetos</a></li>
+        <li><a href="#skills" class="rounded-lg">Skills</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end gap-2">
+      <a href="https://github.com/NicholasGDev" target="_blank" rel="noopener"
+         class="btn btn-ghost btn-sm btn-circle tooltip" data-tip="GitHub">
+        <i class="fab fa-github text-lg"></i>
+      </a>
+      <a href="https://linkedin.com/in/nicholas-goulart" target="_blank" rel="noopener"
+         class="btn btn-ghost btn-sm btn-circle tooltip" data-tip="LinkedIn">
+        <i class="fab fa-linkedin text-lg"></i>
+      </a>
+      <button onclick="window.print()"
+              class="btn btn-primary btn-sm gap-2 hidden md:flex">
+        <i class="fas fa-file-pdf"></i> PDF
+      </button>
+    </div>
+  </nav>
+
+  <div class="container mx-auto px-4 py-8 max-w-6xl">
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section id="sobre" class="card bg-base-100 shadow-xl mb-8 overflow-hidden">
+      <!-- accent bar -->
+      <div class="h-2 bg-gradient-to-r from-primary via-secondary to-accent"></div>
+      <div class="card-body p-6 md:p-10">
+        <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+
+          <!-- Photo -->
+          <div class="flex-shrink-0 flex flex-col items-center gap-3">
+            <div class="avatar">
+              <div class="w-36 rounded-2xl ring-4 ring-primary ring-offset-base-100 ring-offset-2 shadow-xl">
+                <img src="https://github.com/NicholasGDev.png"
+                     alt="Nicholas Goulart"
+                     onerror="this.src='https://ui-avatars.com/api/?name=Nicholas+Goulart&background=570df8&color=fff&size=144'" />
+              </div>
+            </div>
+            <div class="badge badge-success gap-1 font-semibold">
+              <span class="w-2 h-2 bg-success rounded-full inline-block animate-pulse"></span>
+              Disponível
+            </div>
+          </div>
+
+          <!-- Info -->
+          <div class="flex-1 text-center md:text-left">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-base-content leading-tight">
+              Nicholas <span class="text-primary">"Nini"</span> Goulart
+            </h1>
+            <p class="text-lg font-semibold text-primary mt-1">Full-Stack Developer</p>
+            <p class="text-sm text-base-content/60 mt-1 flex items-center justify-center md:justify-start gap-2">
+              <i class="fas fa-map-marker-alt text-primary"></i>
+              São Paulo, Brasil
+            </p>
+
+            <p class="text-base-content/75 mt-4 max-w-2xl text-sm md:text-base leading-relaxed">
+              Desenvolvedor Full-Stack com experiência sólida na concepção, desenvolvimento e implantação
+              de aplicações web escaláveis. Back-End com <strong class="text-primary">PHP (Laravel / CodeIgniter)</strong>,
+              <strong class="text-secondary">Python (Django)</strong>, <strong class="text-accent">Java (Spring Boot)</strong>
+              e <strong class="text-accent">Node.js</strong>. Front-End com <strong>React</strong>,
+              <strong>Vue.js</strong>, Tailwind CSS e DaisyUI. Infraestrutura com Docker, SQL e Linux.
+            </p>
+
+            <!-- Tech badges -->
+            <div class="flex flex-wrap gap-2 mt-4 justify-center md:justify-start">
+              <span class="badge badge-primary badge-outline skill-pill">PHP</span>
+              <span class="badge badge-primary badge-outline skill-pill">Laravel</span>
+              <span class="badge badge-secondary badge-outline skill-pill">Python</span>
+              <span class="badge badge-secondary badge-outline skill-pill">Django</span>
+              <span class="badge badge-accent badge-outline skill-pill">JavaScript</span>
+              <span class="badge badge-accent badge-outline skill-pill">Vue.js</span>
+              <span class="badge badge-accent badge-outline skill-pill">React</span>
+              <span class="badge badge-info badge-outline skill-pill">Java</span>
+              <span class="badge badge-info badge-outline skill-pill">Spring Boot</span>
+              <span class="badge badge-info badge-outline skill-pill">Node.js</span>
+              <span class="badge badge-warning badge-outline skill-pill">🦀 Rust</span>
+            </div>
+
+            <!-- Links -->
+            <div class="flex flex-wrap gap-3 mt-6 justify-center md:justify-start">
+              <a href="https://github.com/NicholasGDev" target="_blank" rel="noopener"
+                 class="btn btn-sm btn-outline gap-2">
+                <i class="fab fa-github"></i> NicholasGDev
+              </a>
+              <a href="https://www.linkedin.com/in/nicholas-goulart" target="_blank" rel="noopener"
+                 class="btn btn-sm btn-outline btn-primary gap-2">
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+              <a href="https://primaziacontabil.onrender.com" target="_blank" rel="noopener"
+                 class="btn btn-sm btn-outline btn-success gap-2">
+                <i class="fas fa-globe"></i> Portfólio ao Vivo
+              </a>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="flex-shrink-0">
+            <div class="stats stats-vertical shadow bg-base-200 text-center w-36">
+              <div class="stat px-4 py-3">
+                <div class="stat-title text-xs">Experiência</div>
+                <div class="stat-value text-2xl text-primary">6+</div>
+                <div class="stat-desc text-xs">anos</div>
+              </div>
+              <div class="stat px-4 py-3">
+                <div class="stat-title text-xs">Empresas</div>
+                <div class="stat-value text-2xl text-secondary">5</div>
+                <div class="stat-desc text-xs">workplaces</div>
+              </div>
+              <div class="stat px-4 py-3">
+                <div class="stat-title text-xs">Repos</div>
+                <div class="stat-value text-2xl text-accent">7+</div>
+                <div class="stat-desc text-xs">no GitHub</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TWO COLUMN GRID ──────────────────────────────────────── -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+      <!-- ════════════════ LEFT SIDEBAR ════════════════════════════ -->
+      <aside class="lg:col-span-1 flex flex-col gap-8">
+
+        <!-- SKILLS -->
+        <section id="skills" class="card bg-base-100 shadow-xl">
+          <div class="card-body p-6">
+            <h2 class="card-title text-primary mb-5">
+              <i class="fas fa-code"></i> Skills
+            </h2>
+
+            <!-- Back-End -->
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-base-content/50 mb-2">Back-End</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge badge-primary skill-pill">PHP</span>
+                <span class="badge badge-primary skill-pill">Laravel</span>
+                <span class="badge badge-primary skill-pill">CodeIgniter</span>
+                <span class="badge badge-primary skill-pill">Python</span>
+                <span class="badge badge-primary skill-pill">Django</span>
+                <span class="badge badge-primary skill-pill">DRF</span>
+                <span class="badge badge-primary skill-pill">Java</span>
+                <span class="badge badge-primary skill-pill">Spring Boot</span>
+                <span class="badge badge-primary skill-pill">Node.js</span>
+                <span class="badge badge-primary skill-pill">REST APIs</span>
+                <span class="badge badge-primary skill-pill">JWT</span>
+              </div>
+            </div>
+
+            <div class="divider my-3"></div>
+
+            <!-- Front-End -->
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-base-content/50 mb-2">Front-End</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge badge-secondary skill-pill">JavaScript</span>
+                <span class="badge badge-secondary skill-pill">Vue.js</span>
+                <span class="badge badge-secondary skill-pill">React</span>
+                <span class="badge badge-secondary skill-pill">HTML5</span>
+                <span class="badge badge-secondary skill-pill">CSS3</span>
+                <span class="badge badge-secondary skill-pill">Tailwind CSS</span>
+                <span class="badge badge-secondary skill-pill">DaisyUI</span>
+                <span class="badge badge-secondary skill-pill">Bootstrap</span>
+                <span class="badge badge-secondary skill-pill">jQuery</span>
+                <span class="badge badge-secondary skill-pill">JavaFX</span>
+              </div>
+            </div>
+
+            <div class="divider my-3"></div>
+
+            <!-- Banco de Dados -->
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-base-content/50 mb-2">Banco de Dados</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge badge-accent skill-pill">MySQL</span>
+                <span class="badge badge-accent skill-pill">PostgreSQL</span>
+                <span class="badge badge-accent skill-pill">SQL Server</span>
+                <span class="badge badge-accent skill-pill">OracleDB</span>
+                <span class="badge badge-accent skill-pill">MariaDB</span>
+                <span class="badge badge-accent skill-pill">JPA</span>
+              </div>
+            </div>
+
+            <div class="divider my-3"></div>
+
+            <!-- Infra -->
+            <div>
+              <p class="text-xs font-bold uppercase tracking-widest text-base-content/50 mb-2">Infra & Ferramentas</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge badge-info skill-pill">Docker</span>
+                <span class="badge badge-info skill-pill">Git</span>
+                <span class="badge badge-info skill-pill">GitHub</span>
+                <span class="badge badge-info skill-pill">Linux</span>
+                <span class="badge badge-info skill-pill">Windows</span>
+                <span class="badge badge-info skill-pill">POO</span>
+                <span class="badge badge-warning skill-pill">🦀 Rust</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FORMAÇÃO -->
+        <section class="card bg-base-100 shadow-xl">
+          <div class="card-body p-6">
+            <h2 class="card-title text-primary mb-5">
+              <i class="fas fa-graduation-cap"></i> Formação
+            </h2>
+
+            <div class="space-y-5">
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
+                  <i class="fas fa-university text-primary text-sm"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-base-content text-sm">UNINOVE</p>
+                  <p class="text-primary text-xs font-medium">Bacharelado em Ciência da Computação</p>
+                </div>
+              </div>
+
+              <div class="divider my-0"></div>
+
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-secondary/20 flex items-center justify-center">
+                  <i class="fas fa-university text-secondary text-sm"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-base-content text-sm">Universidade Cidade de São Paulo</p>
+                  <p class="text-secondary text-xs font-medium">Tecnólogo — Análise e Desenvolvimento de Sistemas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CERTIFICADOS -->
+        <section class="card bg-base-100 shadow-xl">
+          <div class="card-body p-6">
+            <h2 class="card-title text-primary mb-5">
+              <i class="fas fa-certificate"></i> Certificados
+            </h2>
+            <div class="flex gap-4 bg-base-200 p-4 rounded-xl">
+              <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-success/20 flex items-center justify-center">
+                <i class="fas fa-check-circle text-success"></i>
+              </div>
+              <div>
+                <p class="font-bold text-sm text-base-content">O básico de Git e GitHub</p>
+                <p class="text-xs text-success font-semibold mt-0.5">Rocketseat</p>
+                <p class="text-xs text-base-content/50 mt-1">Emitido em jul de 2026</p>
+                <p class="text-xs text-base-content/30 font-mono mt-1 break-all">852ff2bf-8bbb-464f-bfab-603982c63eeb</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RECOMENDAÇÃO -->
+        <section class="card bg-base-100 shadow-xl">
+          <div class="card-body p-6">
+            <h2 class="card-title text-primary mb-5">
+              <i class="fas fa-quote-left"></i> Recomendação
+            </h2>
+            <div class="bg-base-200 p-4 rounded-xl">
+              <p class="text-sm text-base-content/75 italic leading-relaxed">
+                "Tive o prazer de trabalhar com o Nicholas na Softmus. Ele contribuiu ativamente no
+                desenvolvimento de funcionalidades importantes da plataforma, sempre com responsabilidade
+                e abertura para aprender. Foi muito gratificante poder orientá-lo em tecnologias como
+                <strong class="text-primary">Laravel e VueJS</strong> e ver seu crescimento constante.
+                Nicholas é um profissional <strong>comprometido e com grande potencial</strong>."
+              </p>
+              <div class="flex items-center gap-3 mt-4 pt-4 border-t border-base-300">
+                <div class="avatar placeholder">
+                  <div class="bg-gradient-to-br from-primary to-secondary text-primary-content rounded-full w-10 font-bold text-sm flex items-center justify-center">
+                    RB
+                  </div>
+                </div>
+                <div>
+                  <p class="font-semibold text-sm text-base-content">Rodrigo Bahia</p>
+                  <p class="text-xs text-base-content/60">Senior Developer · Head of Technology</p>
+                  <p class="text-xs text-base-content/40">PHP, Python, Node.js, Flutter</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </aside>
+
+      <!-- ════════════════ MAIN CONTENT ═════════════════════════════ -->
+      <main class="lg:col-span-2 flex flex-col gap-8">
+
+        <!-- EXPERIÊNCIA -->
+        <section id="experiencia" class="card bg-base-100 shadow-xl">
+          <div class="card-body p-6">
+            <h2 class="card-title text-primary mb-6">
+              <i class="fas fa-briefcase"></i> Experiência Profissional
+            </h2>
+
+            <div class="space-y-6">
+
+              <!-- Zanthus -->
+              <div class="flex gap-4">
+                <div class="flex flex-col items-center flex-shrink-0">
+                  <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-primary-content font-bold text-xs shadow">ZT</div>
+                  <div class="flex-1 w-px bg-base-300 mt-2"></div>
+                </div>
+                <div class="flex-1 pb-6">
+                  <div class="flex flex-wrap items-start justify-between gap-2">
+                    <div>
+                      <h3 class="font-bold text-base-content">Desenvolvedor Full-Stack</h3>
+                      <a href="https://zanthus.com.br" target="_blank" rel="noopener"
+                         class="text-primary text-sm font-semibold hover:underline">
+                        Zanthus — Tecnologia de Resultados
+                      </a>
+                    </div>
+                    <div class="text-right">
+                      <span class="badge badge-success badge-sm">Atual</span>
+                      <p class="text-xs text-base-content/50 mt-1">jul 2025 – presente · ~1 ano</p>
+                      <p class="text-xs text-base-content/50">Tempo integral</p>
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap gap-1 mt-3">
+                    <span class="badge badge-sm badge-ghost">Microsoft SQL Server</span>
+                    <span class="badge badge-sm badge-ghost">POO</span>
+                    <span class="badge badge-sm badge-ghost">PHP</span>
+                    <span class="badge badge-sm badge-ghost">React</span>
+                    <span class="badge badge-sm badge-ghost">JavaScript</span>
+                    <span class="badge badge-sm badge-ghost">Python</span>
+                    <span class="badge badge-sm badge-ghost">Laravel</span>
+                    <span class="badge badge-sm badge-ghost">PostgreSQL</span>
+                    <span class="badge badge-sm badge-ghost">Full-Stack</span>
+                    <span class="badge badge-sm badge-ghost">+19 competências</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Redbelt -->
+              <div class="flex gap-4">
+                <div class="flex flex-col items-center flex-shrink-0">
+                  <div class="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center text-secondary-content font-bold text-xs shadow">RB</div>
+                  <div class="flex-1 w-px bg-base-300 mt-2"></div>
+                </div>
+                <div class="flex-1 pb-6">
+                  <div class="flex flex-wrap items-start justify-between gap-2">
+                    <div>
+                      <h3 class="font-bold text-base-content">Desenvolvedor Full-Stack</h3>
+                      <p class="text-secondary text-sm font-semibold">Redbelt Security</p>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-xs text-base-content/50">fev 2023 – jan 2025 · 2 anos</p>
+                      <p class="text-xs text-base-content/50">São Paulo · Híbrido</p>
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap gap-1 mt-3">
+                    <span class="badge badge-sm badge-ghost">POO</span>
+                    <span class="badge badge-sm badge-ghost">PHP</span>
+                    <span class="badge badge-sm badge-ghost">React</span>
+                    <span class="badge badge-sm badge-ghost">Laravel</span>
+                    <span class="badge badge-sm badge-ghost">JavaScript</span>
+                    <span class="badge badge-sm badge-ghost">Python</span>
+                    <span class="badge badge-sm badge-ghost">PostgreSQL</span>
+                    <span class="badge badge-sm badge-ghost">+19 competências</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cars2You -->
+              <div class="flex gap-4">
+                <div class="flex flex-col items-center flex-shrink-0">
+                  <div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center text-accent-content font-bold text-xs shadow">C2</div>
+                  <div class="flex-1 w-px bg-base-300 mt-2"></div>
+                </div>
+                <div class="flex-1 pb-6">
+                  <div class="flex flex-wrap items-start justify-between gap-2">
+                    <div>
+                      <h3 class="font-bold text-base-content">Programador Full-Stack</h3>
+                      <p class="text-accent text-sm font-semibold">Cars2You</p>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-xs text-base-content/50">set 2022 – fev 2023 · 6 meses</p>
+                      <p class="text-xs text-base-content/50">São Paulo · Presencial</p>
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap gap-1 mt-3">
+                    <span class="badge badge-sm badge-ghost">Java</span>
+                    <span class="badge badge-sm badge-ghost">Spring Boot</span>
+                    <span class="badge badge-sm badge-ghost">MySQL</span>
+                    <span class="badge badge-sm badge-ghost">JPA</span>
+                    <span class="badge badge-sm badge-ghost">POO</span>
+                    <span class="badge badge-sm badge-ghost">PHP</span>
+                    <span class="badge badge-sm badge-ghost">React</span>
+                    <span class="badge badge-sm badge-ghost">Laravel</span>
+                    <span class="badge badge-sm badge-ghost">JavaScript</span>
+                    <span class="badge badge-sm badge-ghost">Python</span>
+                    <span class="badge badge-sm badge-ghost">PostgreSQL</span>
+                    <span class="badge badge-sm badge-ghost">+18 competências</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Softmus -->
+              <div class="flex gap-4">
+                <div class="flex flex-col items-center flex-shrink-0">
+                  <div class="w-10 h-10 rounded-xl bg-info flex items-center justify-center text-info-content font-bold text-xs shadow">SM</div>
+                  <div class="flex-1 w-px bg-base-300 mt-2"></div>
+                </div>
+                <div class="flex-1 pb-6">
+                  <div class="flex flex-wrap items-start justify-between gap-2">
+                    <div>
+                      <h3 class="font-bold text-base-content">Programador Full-Stack</h3>
+                      <p class="text-info text-sm font-semibold">SOFTMUS TECNOLOGIA</p>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-xs text-base-content/50">abr 2022 – set 2022 · 6 meses</p>
+                      <p class="text-xs text-base-content/50">Campinas, SP</p>
+                    </div>
+                  </div>
+                  <p class="text-xs text-base-content/60 italic mt-2">
+                    "Contribuiu ativamente no desenvolvimento de funcionalidades importantes da plataforma,
+                    sempre com responsabilidade e abertura para aprender." — Rodrigo Bahia
+                  </p>
+                  <div class="flex flex-wrap gap-1 mt-3">
+                    <span class="badge badge-sm badge-ghost">Laravel</span>
+                    <span class="badge badge-sm badge-ghost">Vue.js</span>
+                    <span class="badge badge-sm badge-ghost">MySQL</span>
+                    <span class="badge badge-sm badge-ghost">POO</span>
+                    <span class="badge badge-sm badge-ghost">PHP</span>
+                    <span class="badge badge-sm badge-ghost">React</span>
+                    <span class="badge badge-sm badge-ghost">JavaScript</span>
+                    <span class="badge badge-sm badge-ghost">Python</span>
+                    <span class="badge badge-sm badge-ghost">PostgreSQL</span>
+                    <span class="badge badge-sm badge-ghost">+24 competências</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Ecoassist -->
+              <div class="flex gap-4">
+                <div class="flex flex-col items-center flex-shrink-0">
+                  <div class="w-10 h-10 rounded-xl bg-success/70 flex items-center justify-center text-success-content font-bold text-xs shadow">EC</div>
+                </div>
+                <div class="flex-1">
+                  <div class="flex flex-wrap items-start justify-between gap-2">
+                    <div>
+                      <h3 class="font-bold text-base-content">Programador Full-Stack Jr</h3>
+                      <p class="text-success text-sm font-semibold">Ecoassist Serviços Sustentáveis</p>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-xs text-base-content/50">dez 2019 – jul 2021 · 1 ano 8 meses</p>
+                      <p class="text-xs text-base-content/50">Brasil · Presencial</p>
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap gap-1 mt-3">
+                    <span class="badge badge-sm badge-ghost">PHP</span>
+                    <span class="badge badge-sm badge-ghost">MySQL</span>
+                    <span class="badge badge-sm badge-ghost">Web Dev</span>
+                    <span class="badge badge-sm badge-ghost">+13 competências</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- GITHUB PROJECTS -->
+        <section id="projetos" class="card bg-base-100 shadow-xl">
+          <div class="card-body p-6">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="card-title text-primary">
+                <i class="fab fa-github"></i> Projetos no GitHub
+              </h2>
+              <a href="https://github.com/NicholasGDev?tab=repositories" target="_blank" rel="noopener"
+                 class="btn btn-sm btn-outline btn-primary gap-2">
+                Ver todos <i class="fas fa-external-link-alt text-xs"></i>
+              </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+              <!-- primaziaContabil -->
+              <div class="card bg-base-200 project-card">
+                <div class="card-body p-5">
+                  <div class="flex items-start justify-between mb-1">
+                    <div class="flex items-center gap-2">
+                      <i class="fas fa-folder-open text-primary"></i>
+                      <h3 class="font-bold text-base-content text-sm">primaziaContabil</h3>
+                    </div>
+                    <a href="https://github.com/NicholasGDev/primaziaContabil" target="_blank" rel="noopener"
+                       class="btn btn-ghost btn-xs btn-circle">
+                      <i class="fab fa-github text-sm"></i>
+                    </a>
+                  </div>
+                  <span class="badge badge-success badge-sm gap-1 mb-2">
+                    <span class="w-1.5 h-1.5 bg-success rounded-full inline-block"></span> Live
+                  </span>
+                  <p class="text-xs text-base-content/70 leading-relaxed">
+                    Landing page para contabilidade com captação de leads. Deploy em produção no Render.
+                  </p>
+                  <div class="flex flex-wrap gap-1 mt-3">
+                    <span class="badge badge-xs badge-primary">PHP</span>
+                    <span class="badge badge-xs badge-primary">CodeIgniter</span>
+                    <span class="badge badge-xs badge-secondary">Tailwind</span>
+                    <span class="badge badge-xs badge-secondary">DaisyUI</span>
+                    <span class="badge badge-xs badge-accent">JS</span>
+                  </div>
+                  <a href="https://primaziacontabil.onrender.com" target="_blank" rel="noopener"
+                     class="btn btn-xs btn-success btn-outline mt-3 gap-1 w-full">
+                    <i class="fas fa-globe text-xs"></i> primaziacontabil.onrender.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- NG-Erp -->
+              <div class="card bg-base-200 project-card">
+                <div class="card-body p-5">
+                  <div class="flex items-start justify-between mb-1">
+                    <div class="flex items-center gap-2">
+                      <i class="fas fa-folder-open text-primary"></i>
+                      <h3 class="font-bold text-base-content text-sm">NG-Erp</h3>
+                    </div>
+                    <a href="https://github.com/NicholasGDev/NG-Erp" target="_blank" rel="noopener"
+                       class="btn btn-ghost btn-xs btn-circle">
+                      <i class="fab fa-github text-sm"></i>
+                    </a>
+                  </div>
+                  <span class="badge badge-primary badge-sm mb-2">Sistema ERP</span>
+                  <p class="text-xs text-base-content/70 leading-relaxed">
+                    ERP completo com controle de estoque Kardex (imutável), autenticação JWT,
+                    gestão de usuários e permissões.
+                  </p>
+                  <div class="flex flex-wrap gap-1 mt-3">
+                    <span class="badge badge-xs badge-primary">PHP</span>
+                    <span class="badge badge-xs badge-primary">Laravel</span>
+                    <span class="badge badge-xs badge-accent">JWT</span>
+                    <span class="badge badge-xs badge-info">MySQL</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- pythonErpConsole -->
+              <div class="card bg-base-200 project-card">
+                <div class="card-body p-5">
+                  <div class="flex items-start justify-between mb-1">
+                    <div class="flex items-center gap-2">
+                      <i class="fas fa-folder-open text-secondary"></i>
+                      <h3 class="font-bold text-base-content text-sm">pythonErpConsole</h3>
+                    </div>
+                    <a href="https://github.com/NicholasGDev/pythonErpConsole" target="_blank" rel="noopener"
+                       class="btn btn-ghost btn-xs btn-circle">
+                      <i class="fab fa-github text-sm"></i>
+                    </a>
+                  </div>
+                  <span class="badge badge-secondary badge-sm mb-2">API REST / ERP</span>
+                  <p class="text-xs text-base-content/70 leading-relaxed">
+                    Backend de ERP com Django REST Framework, JWT com blacklist, CORS, validação
+                    de senha e controle de acesso.
+                  </p>
+                  <div class="flex flex-wrap gap-1 mt-3">
+                    <span class="badge badge-xs badge-secondary">Python</span>
+                    <span class="badge badge-xs badge-secondary">Django</span>
+                    <span class="badge badge-xs badge-secondary">DRF</span>
+                    <span class="badge badge-xs badge-accent">JWT</span>
+                    <span class="badge badge-xs badge-info">PostgreSQL</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CaronteProject -->
+              <div class="card bg-base-200 project-card">
+                <div class="card-body p-5">
+                  <div class="flex items-start justify-between mb-1">
+                    <div class="flex items-center gap-2">
+                      <i class="fas fa-folder-open text-warning"></i>
+                      <h3 class="font-bold text-base-content text-sm">CaronteProject</h3>
+                    </div>
+                    <a href="https://github.com/NicholasGDev/CaronteProject" target="_blank" rel="noopener"
+                       class="btn btn-ghost btn-xs btn-circle">
+                      <i class="fab fa-github text-sm"></i>
+                    </a>
+                  </div>
+                  <span class="badge badge-warning badge-sm mb-2">Auth System</span>
+                  <p class="text-xs text-base-content/70 leading-relaxed">
+                    Sistema de autenticação robusto com Django, bloqueio por tentativas excessivas e
+                    controle de acesso granular.
+                  </p>
+                  <div class="flex flex-wrap gap-1 mt-3">
+                    <span class="badge badge-xs badge-secondary">Python</span>
+                    <span class="badge badge-xs badge-secondary">Django</span>
+                    <span class="badge badge-xs badge-warning">Auth</span>
+                    <span class="badge badge-xs badge-warning">Security</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- WYNX -->
+              <div class="card bg-base-200 project-card">
+                <div class="card-body p-5">
+                  <div class="flex items-start justify-between mb-1">
+                    <div class="flex items-center gap-2">
+                      <i class="fas fa-folder-open text-accent"></i>
+                      <h3 class="font-bold text-base-content text-sm">WYNX</h3>
+                    </div>
+                    <a href="https://github.com/NicholasGDev/WYNX" target="_blank" rel="noopener"
+                       class="btn btn-ghost btn-xs btn-circle">
+                      <i class="fab fa-github text-sm"></i>
+                    </a>
+                  </div>
+                  <span class="badge badge-accent badge-sm mb-2">Node.js App</span>
+                  <p class="text-xs text-base-content/70 leading-relaxed">
+                    Aplicação Node.js com health-check de serviços e monitoramento de disponibilidade.
+                  </p>
+                  <div class="flex flex-wrap gap-1 mt-3">
+                    <span class="badge badge-xs badge-accent">Node.js</span>
+                    <span class="badge badge-xs badge-accent">JavaScript</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ngdev-laravel -->
+              <div class="card bg-base-200 project-card">
+                <div class="card-body p-5">
+                  <div class="flex items-start justify-between mb-1">
+                    <div class="flex items-center gap-2">
+                      <i class="fas fa-folder-open text-info"></i>
+                      <h3 class="font-bold text-base-content text-sm">ngdev-laravel</h3>
+                    </div>
+                    <a href="https://github.com/NicholasGDev/ngdev-laravel" target="_blank" rel="noopener"
+                       class="btn btn-ghost btn-xs btn-circle">
+                      <i class="fab fa-github text-sm"></i>
+                    </a>
+                  </div>
+                  <span class="badge badge-info badge-sm mb-2">Landing Pages</span>
+                  <p class="text-xs text-base-content/70 leading-relaxed">
+                    Coleção de landing pages para clientes com CodeIgniter, HTML5 e CSS3.
+                  </p>
+                  <div class="flex flex-wrap gap-1 mt-3">
+                    <span class="badge badge-xs badge-primary">PHP</span>
+                    <span class="badge badge-xs badge-primary">CodeIgniter</span>
+                    <span class="badge badge-xs badge-secondary">HTML5</span>
+                    <span class="badge badge-xs badge-secondary">CSS3</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- PROJETOS DESTAQUE -->
+        <section class="card bg-base-100 shadow-xl">
+          <div class="card-body p-6">
+            <h2 class="card-title text-primary mb-5">
+              <i class="fas fa-star"></i> Projetos em Destaque
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+              <!-- AES Brasil -->
+              <div class="card bg-gradient-to-br from-primary/15 to-secondary/15 border border-primary/25">
+                <div class="card-body p-5">
+                  <div class="flex items-start justify-between">
+                    <h3 class="font-bold text-base-content">Landing Page — AES Brasil</h3>
+                    <span class="badge badge-primary badge-sm">2021</span>
+                  </div>
+                  <p class="text-xs text-base-content/70 mt-2 leading-relaxed">
+                    Landing page para capitalização de leads da empresa de energia AES Brasil.
+                  </p>
+                  <div class="flex flex-wrap gap-1 mt-3">
+                    <span class="badge badge-xs badge-primary">PHP</span>
+                    <span class="badge badge-xs badge-secondary">HTML5</span>
+                    <span class="badge badge-xs badge-accent">JS</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- GitHub desde 2018 -->
+              <div class="card bg-gradient-to-br from-base-200 to-base-300 border border-base-300">
+                <div class="card-body p-5">
+                  <div class="flex items-start justify-between">
+                    <h3 class="font-bold text-base-content">GitHub Profile</h3>
+                    <span class="badge badge-ghost badge-sm">desde 2018</span>
+                  </div>
+                  <p class="text-xs text-base-content/70 mt-2 leading-relaxed">
+                    Projetos pessoais e profissionais documentados desde 2018, com evolução contínua
+                    em PHP, Python, Java e JavaScript.
+                  </p>
+                  <a href="https://github.com/NicholasGDev" target="_blank" rel="noopener"
+                     class="btn btn-xs btn-outline mt-3 gap-1">
+                    <i class="fab fa-github"></i> NicholasGDev
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <!-- ── FOOTER ──────────────────────────────────────────────── -->
+    <footer class="footer footer-center bg-base-100 rounded-2xl shadow-xl mt-8 p-8">
+      <div class="h-1 w-24 bg-gradient-to-r from-primary via-secondary to-accent rounded-full mb-4"></div>
+      <p class="text-xl font-extrabold tracking-tight">
+        Nicholas <span class="text-primary">"Nini"</span> Goulart
+      </p>
+      <p class="text-base-content/50 text-sm">Full-Stack Developer · São Paulo, Brasil</p>
+      <div class="flex gap-6 mt-3">
+        <a href="https://github.com/NicholasGDev" target="_blank" rel="noopener"
+           class="text-base-content/60 hover:text-primary transition-colors text-xl">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/nicholas-goulart" target="_blank" rel="noopener"
+           class="text-base-content/60 hover:text-primary transition-colors text-xl">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://primaziacontabil.onrender.com" target="_blank" rel="noopener"
+           class="text-base-content/60 hover:text-success transition-colors text-xl">
+          <i class="fas fa-globe"></i>
+        </a>
+      </div>
+      <p class="text-xs text-base-content/30 mt-4">© 2026 · Nicholas Goulart · Todos os direitos reservados</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
