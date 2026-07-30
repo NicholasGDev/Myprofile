@@ -12,8 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --pastel-white: #fdfcf8;
-      --surface-white: #ffffff;
+      --pastel-white: hsla(48, 56%, 98%, 0.555);
+      --surface-white: #ffffff62;
       --text-gray-dark: #2f3742;
       --text-gray-soft: #4b5563;
       --navbar-blue: #1e40af;
@@ -88,7 +88,7 @@
 <body class="bg-base-200 min-h-screen">
 
   <!-- ── NAVBAR ───────────────────────────────────────────────── -->
-  <nav class="navbar bg-base-100 shadow-md sticky top-0 z-50 no-print px-4 md:px-8">
+  <nav class="navbar bg-base-100 shadow-md sticky top-0 z-50 no-print px-4 md:px-8 bg-accent/10 backdrop-blur-md">
     <div class="navbar-start">
       <span class="text-xl font-extrabold tracking-tight">
         <span class="text-light bg-light"><img src="ngdeviconsvg.svg" alt="NG Dev Icon" class="inline-block w-9"></span><span class="text-base-content">Dev</span>
@@ -391,7 +391,7 @@
       <main class="lg:col-span-2 flex flex-col gap-8">
 
         <!-- EXPERIÊNCIA -->
-        <section id="experiencia" class="card bg-base-100 shadow-xl">
+        <section id="experiencia" class="card bg-base-100 shadow-xl border border-base-300">
           <div class="card-body p-6">
             <h2 class="card-title text-primary mb-6">
               <i class="fas fa-briefcase"></i> Experiência Profissional
@@ -403,7 +403,7 @@
               <div class="flex gap-4">
                 <div class="flex flex-col items-center flex-shrink-0">
                   <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-primary-content font-bold text-xs shadow">ZT</div>
-                  <div class="flex-1 w-px bg-base-300 mt-2"></div>
+                  <div class="flex-1 w-px bg-base-300"></div>
                 </div>
                 <div class="flex-1 pb-6">
                   <div class="flex flex-wrap items-start justify-between gap-2">
@@ -436,12 +436,12 @@
               </div>
 
               <!-- Redbelt -->
-              <div class="flex gap-4">
-                <div class="flex flex-col items-center flex-shrink-0">
-                  <div class="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center text-secondary-content font-bold text-xs shadow">RB</div>
-                  <div class="flex-1 w-px bg-base-300 mt-2"></div>
+              <div class="flex gap-4 border-t">
+                <div class="flex flex-col items-center flex-shrink-0 ">
+                  <div class=" mt-4 w-10 h-10 rounded-xl bg-secondary flex items-center justify-center text-secondary-content font-bold text-xs shadow">RB</div>
+                  <div class="flex-1 w-px bg-base-300"></div>
                 </div>
-                <div class="flex-1 pb-6">
+                <div class="flex-1 mt-4 pb-6">
                   <div class="flex flex-wrap items-start justify-between gap-2">
                     <div>
                       <h3 class="font-bold text-base-content">Desenvolvedor Full-Stack</h3>
@@ -466,12 +466,12 @@
               </div>
 
               <!-- Cars2You -->
-              <div class="flex gap-4">
+              <div class="flex gap-4 border-t">
                 <div class="flex flex-col items-center flex-shrink-0">
-                  <div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center text-accent-content font-bold text-xs shadow">C2</div>
-                  <div class="flex-1 w-px bg-base-300 mt-2"></div>
+                  <div class="mt-4 w-10 h-10 rounded-xl bg-accent flex items-center justify-center text-accent-content font-bold text-xs shadow">C2</div>
+                  <div class="flex-1 w-px bg-base-300"></div>
                 </div>
-                <div class="flex-1 pb-6">
+                <div class="flex-1 mt-4 pb-6">
                   <div class="flex flex-wrap items-start justify-between gap-2">
                     <div>
                       <h3 class="font-bold text-base-content">Programador Full-Stack</h3>
@@ -499,12 +499,12 @@
               </div>
 
               <!-- Softmus -->
-              <div class="flex gap-4">
+              <div class="flex gap-4 border-t">
                 <div class="flex flex-col items-center flex-shrink-0">
-                  <div class="w-10 h-10 rounded-xl bg-info flex items-center justify-center text-info-content font-bold text-xs shadow">SM</div>
-                  <div class="flex-1 w-px bg-base-300 mt-2"></div>
+                  <div class="mt-4 w-10 h-10 rounded-xl bg-info flex items-center justify-center text-info-content font-bold text-xs shadow">SM</div>
+                  <div class="flex-1 w-px bg-base-300"></div>
                 </div>
-                <div class="flex-1 pb-6">
+                <div class="flex-1 mt-4 pb-6">
                   <div class="flex flex-wrap items-start justify-between gap-2">
                     <div>
                       <h3 class="font-bold text-base-content">Programador Full-Stack</h3>
@@ -535,11 +535,11 @@
               </div>
 
               <!-- Ecoassist -->
-              <div class="flex gap-4">
+              <div class="flex gap-4 border-t">
                 <div class="flex flex-col items-center flex-shrink-0">
-                  <div class="w-10 h-10 rounded-xl bg-success/70 flex items-center justify-center text-success-content font-bold text-xs shadow">EC</div>
+                  <div class="mt-4 w-10 h-10 rounded-xl bg-success/70 flex items-center justify-center text-success-content font-bold text-xs shadow">EC</div>
                 </div>
-                <div class="flex-1">
+                <div class="flex-1 mt-4 pb-6">
                   <div class="flex flex-wrap items-start justify-between gap-2">
                     <div>
                       <h3 class="font-bold text-base-content">Programador Full-Stack Jr</h3>
@@ -564,7 +564,7 @@
         </section>
 
         <!-- GITHUB PROJECTS -->
-        <section id="projetos" class="card bg-base-100 shadow-xl">
+        <section id="projetos" class="card bg-base-100 shadow-xl border border-base-300">
           <div class="card-body p-6">
             <div class="flex items-center justify-between mb-6">
               <h2 class="card-title text-primary">
@@ -579,7 +579,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
               <!-- primaziaContabil -->
-              <div class="card bg-base-200 project-card">
+              <div class="card bg-base-200 project-card border border-base-300">
                 <div class="card-body p-5">
                   <div class="flex items-start justify-between mb-1">
                     <div class="flex items-center gap-2">
@@ -612,7 +612,7 @@
               </div>
 
               <!-- NG-Erp -->
-              <div class="card bg-base-200 project-card">
+              <div class="card bg-base-200 project-card border border-base-300">
                 <div class="card-body p-5">
                   <div class="flex items-start justify-between mb-1">
                     <div class="flex items-center gap-2">
@@ -639,7 +639,7 @@
               </div>
 
               <!-- pythonErpConsole -->
-              <div class="card bg-base-200 project-card">
+              <div class="card bg-base-200 project-card border border-base-300">
                 <div class="card-body p-5">
                   <div class="flex items-start justify-between mb-1">
                     <div class="flex items-center gap-2">
@@ -667,7 +667,7 @@
               </div>
 
               <!-- CaronteProject -->
-              <div class="card bg-base-200 project-card">
+              <div class="card bg-base-200 project-card border border-base-300">
                 <div class="card-body p-5">
                   <div class="flex items-start justify-between mb-1">
                     <div class="flex items-center gap-2">
@@ -694,31 +694,33 @@
               </div>
 
               <!-- WYNX -->
-              <div class="card bg-base-200 project-card">
+              <div class="card bg-base-200 project-card border border-base-300">
                 <div class="card-body p-5">
                   <div class="flex items-start justify-between mb-1">
                     <div class="flex items-center gap-2">
                       <i class="fas fa-folder-open text-accent"></i>
-                      <h3 class="font-bold text-base-content text-sm">WYNX</h3>
+                      <h3 class="font-bold text-base-content text-sm">Caronte Landing Page</h3>
                     </div>
-                    <a href="https://github.com/NicholasGDev/WYNX" target="_blank" rel="noopener"
+                    <a href="https://github.com/NicholasGDev/CaronteLadingPageBase" target="_blank" rel="noopener"
                        class="btn btn-ghost btn-xs btn-circle">
                       <i class="fab fa-github text-sm"></i>
                     </a>
                   </div>
-                  <span class="badge badge-accent badge-sm mb-2">Node.js App</span>
+                  <span class="badge badge-accent badge-sm mb-2">Codeigniter, PHP, MySQL, JavaScript</span>
                   <p class="text-xs text-base-content/70 leading-relaxed">
-                    Aplicação Node.js com health-check de serviços e monitoramento de disponibilidade.
+                    Landing page para o projeto Caronte, utilizando Codeigniter, PHP, MySQL e JavaScript.
                   </p>
                   <div class="flex flex-wrap gap-1 mt-3">
-                    <span class="badge badge-xs badge-accent">Node.js</span>
+                    <span class="badge badge-xs badge-accent">Codeigniter</span>
+                    <span class="badge badge-xs badge-accent">PHP</span>
+                    <span class="badge badge-xs badge-accent">MySQL</span>
                     <span class="badge badge-xs badge-accent">JavaScript</span>
                   </div>
                 </div>
               </div>
 
               <!-- ngdev-laravel -->
-              <div class="card bg-base-200 project-card">
+              <div class="card bg-base-200 project-card border border-base-300">
                 <div class="card-body p-5">
                   <div class="flex items-start justify-between mb-1">
                     <div class="flex items-center gap-2">
@@ -748,13 +750,28 @@
         </section>
 
         <!-- PROJETOS DESTAQUE -->
-        <section class="card bg-base-100 shadow-xl">
+        <section class="card bg-base-100 shadow-xl overflow-hidden border border-base-300">
           <div class="card-body p-6">
             <h2 class="card-title text-primary mb-5">
               <i class="fas fa-star"></i> Projetos em Destaque
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <!--Linkedin-->
+              <div class="card bg-light from-primary/15 to-secondary/15 border border-primary/25">
+                <div class="card-body p-5">
+                  <div class="flex items-start justify-between">
+                    <h3 class="font-bold text-base-content text-blue-500">LinkedIn</h3>
+                  </div>
+                  <p class="text-xs text-base-content/70 mt-2 leading-relaxed">
+                    Acesse meu perfil profissional no LinkedIn para conhecer minha trajetória, habilidades e recomendações.
+                  </p>
+                  <a href="https://linkedin.com/in/nicholas-goulart" target="_blank" rel="noopener"
+                     class="btn btn-xs btn-outline mt-3 gap-1 text-blue-500 hover:text-white hover:bg-blue-500 hover:border-blue-500">
+                    <i class="fab fa-linkedin"></i> Nicholas Goulart
+                  </a>
+                </div>
+              </div>
 
               <!-- AES Brasil -->
               <div class="card bg-gradient-to-br from-primary/15 to-secondary/15 border border-primary/25">
@@ -763,13 +780,21 @@
                     <h3 class="font-bold text-base-content">Landing Page — AES Brasil</h3>
                     <span class="badge badge-primary badge-sm">2021</span>
                   </div>
-                  <p class="text-xs text-base-content/70 mt-2 leading-relaxed">
-                    Landing page para capitalização de leads da empresa de energia AES Brasil.
-                  </p>
+                  <a href="https://linkedin.com/in/nicholas-goulart" target="_blank" rel="noopener"
+                     class="btn btn-xs btn-outline mt-3 gap-1">
+                    <i class="fab fa-linkedin"></i> NicholasGDev
+                  </a>
                   <div class="flex flex-wrap gap-1 mt-3">
                     <span class="badge badge-xs badge-primary">PHP</span>
-                    <span class="badge badge-xs badge-secondary">HTML5</span>
-                    <span class="badge badge-xs badge-accent">JS</span>
+                    <span class="badge badge-xs badge-accent">LARAVEL</span>
+                    <span class="badge badge-xs badge-accent">Codeigniter</span>
+                    <span class="badge badge-xs badge-secondary">JAVASCRIPT</span>
+                    <span class="badge badge-xs badge-accent">NODE</span>
+                    <span class="badge badge-xs badge-accent">REACT</span>
+                    <span class="badge badge-xs badge-accent">Vue.Js</span>
+                    <span class="badge badge-xs badge-accent">PYTHON</span>
+                    <span class="badge badge-xs badge-accent">DJANGO</span>
+                    <span class="badge badge-xs badge-accent">FLASK</span>
                   </div>
                 </div>
               </div>
