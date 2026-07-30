@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Sombra realista para o efeito de adesivo recortado (die-cut) -->
+    <filter id="sticker-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.15" />
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.10" />
+    </filter>
+
+    <!-- Gradiente azul vibrante e premium -->
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0066FF" />
+      <stop offset="100%" stop-color="#003D99" />
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#sticker-shadow)">
+    <!-- Borda exterior branca do adesivo (Thick White Outline) -->
+    <!-- Essa linha usa exatamente o mesmo caminho do logo, mas mais grossa para criar o fundo -->
+    <path
+      d="M 275 104.4
+         L 250 90
+         L 111.44 170
+         L 111.44 330
+         L 155 355.1
+         Q 180 369.5 180 340
+         L 180 180
+         L 320 320
+         L 320 160
+         Q 320 130.4 345 144.8
+         L 388.56 170
+         L 388.56 330
+         L 250 410
+         L 225 395.6"
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="56"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Caminho principal do Logo (Azul) -->
+    <path
+      d="M 275 104.4
+         L 250 90
+         L 111.44 170
+         L 111.44 330
+         L 155 355.1
+         Q 180 369.5 180 340
+         L 180 180
+         L 320 320
+         L 320 160
+         Q 320 130.4 345 144.8
+         L 388.56 170
+         L 388.56 330
+         L 250 410
+         L 225 395.6"
+      fill="none"
+      stroke="url(#blueGradient)"
+      stroke-width="32"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </g>
+</svg>

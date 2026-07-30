@@ -1,15 +1,78 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="night">
+<html lang="pt-BR" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="ngdeviconsvg.svg" type="image/x-icon" />
+  <meta name="description" content="Nicholas Goulart — Desenvolvedor Full-Stack com experiência em PHP, Laravel, Python, Django, Java, Spring Boot, Node.js, React, Vue.js, Tailwind CSS e DaisyUI.">
   <title>Nicholas Goulart — Full-Stack Developer</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4/dist/full.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    :root {
+      --pastel-white: #fdfcf8;
+      --surface-white: #ffffff;
+      --text-gray-dark: #2f3742;
+      --text-gray-soft: #4b5563;
+      --navbar-blue: #1e40af;
+      --navbar-blue-strong: #1e40af;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--pastel-white);
+      color: var(--text-gray-dark);
+    }
+
+    .bg-base-200,
+    .bg-base-300 {
+      background-color: var(--pastel-white) !important;
+    }
+
+    .bg-base-100,
+    .card,
+    .stats,
+    .footer {
+      background-color: var(--surface-white) !important;
+    }
+
+    .text-base-content,
+    .card-title,
+    h1,
+    h2,
+    h3,
+    p,
+    span,
+    a,
+    li {
+      color: var(--text-gray-dark);
+    }
+
+    .text-base-content\/75,
+    .text-base-content\/70,
+    .text-base-content\/60,
+    .text-base-content\/50,
+    .text-base-content\/40,
+    .text-base-content\/30 {
+      color: var(--text-gray-soft) !important;
+    }
+
+    .navbar,
+    .navbar .menu a,
+    .navbar .btn,
+    .navbar i,
+    .navbar .text-base-content {
+      color: var(--navbar-blue) !important;
+    }
+
+    .navbar .menu a:hover,
+    .navbar .btn:hover,
+    .navbar i:hover {
+      color: var(--navbar-blue-strong) !important;
+    }
+
     .skill-pill { transition: transform 0.15s ease, box-shadow 0.15s ease; }
     .skill-pill:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
     .project-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
@@ -28,7 +91,7 @@
   <nav class="navbar bg-base-100 shadow-md sticky top-0 z-50 no-print px-4 md:px-8">
     <div class="navbar-start">
       <span class="text-xl font-extrabold tracking-tight">
-        <span class="text-primary">NG</span><span class="text-base-content">Dev</span>
+        <span class="text-light bg-light"><img src="ngdeviconsvg.svg" alt="NG Dev Icon" class="inline-block w-9"></span><span class="text-base-content">Dev</span>
       </span>
     </div>
     <div class="navbar-center hidden md:flex">
@@ -49,7 +112,7 @@
         <i class="fab fa-linkedin text-lg"></i>
       </a>
       <button onclick="window.print()"
-              class="btn btn-primary btn-sm gap-2 hidden md:flex">
+              class="btn btn-light btn-sm gap-2 hidden md:flex">
         <i class="fas fa-file-pdf"></i> PDF
       </button>
     </div>
@@ -82,7 +145,7 @@
           <!-- Info -->
           <div class="flex-1 text-center md:text-left">
             <h1 class="text-3xl md:text-4xl font-extrabold text-base-content leading-tight">
-              Nicholas <span class="text-primary">"Nini"</span> Goulart
+              Nicholas Goulart
             </h1>
             <p class="text-lg font-semibold text-primary mt-1">Full-Stack Developer</p>
             <p class="text-sm text-base-content/60 mt-1 flex items-center justify-center md:justify-start gap-2">
@@ -93,7 +156,7 @@
             <p class="text-base-content/75 mt-4 max-w-2xl text-sm md:text-base leading-relaxed">
               Desenvolvedor Full-Stack com experiência sólida na concepção, desenvolvimento e implantação
               de aplicações web escaláveis. Back-End com <strong class="text-primary">PHP (Laravel / CodeIgniter)</strong>,
-              <strong class="text-secondary">Python (Django)</strong>, <strong class="text-accent">Java (Spring Boot)</strong>
+              <strong class="text-secondary">Python (Django, Flask)</strong>, <strong class="text-accent">Node (Express, Prisma, NestJS)</strong>
               e <strong class="text-accent">Node.js</strong>. Front-End com <strong>React</strong>,
               <strong>Vue.js</strong>, Tailwind CSS e DaisyUI. Infraestrutura com Docker, SQL e Linux.
             </p>
@@ -107,10 +170,9 @@
               <span class="badge badge-accent badge-outline skill-pill">JavaScript</span>
               <span class="badge badge-accent badge-outline skill-pill">Vue.js</span>
               <span class="badge badge-accent badge-outline skill-pill">React</span>
-              <span class="badge badge-info badge-outline skill-pill">Java</span>
-              <span class="badge badge-info badge-outline skill-pill">Spring Boot</span>
+              <span class="badge badge-info badge-outline skill-pill">TypeScript</span>
+              <span class="badge badge-info badge-outline skill-pill">Flask</span>
               <span class="badge badge-info badge-outline skill-pill">Node.js</span>
-              <span class="badge badge-warning badge-outline skill-pill">🦀 Rust</span>
             </div>
 
             <!-- Links -->
@@ -180,8 +242,8 @@
                 <span class="badge badge-primary skill-pill">React</span>
                 <span class="badge badge-primary skill-pill">Express</span>
                 <span class="badge badge-primary skill-pill">Flask</span>
-                <span class="badge badge-primary skill-pill">Java</span>
-                <span class="badge badge-primary skill-pill">Spring Boot</span>
+                <span class="badge badge-primary skill-pill">React</span>
+                <span class="badge badge-primary skill-pill">Flask</span>
                 <span class="badge badge-primary skill-pill">Node.js</span>
                 <span class="badge badge-primary skill-pill">REST APIs</span>
                 <span class="badge badge-primary skill-pill">JWT</span>
@@ -194,16 +256,17 @@
             <div>
               <p class="text-xs font-bold uppercase tracking-widest text-base-content/50 mb-2">Front-End</p>
               <div class="flex flex-wrap gap-2">
-                <span class="badge badge-secondary skill-pill">JavaScript</span>
-                <span class="badge badge-secondary skill-pill">Vue.js</span>
-                <span class="badge badge-secondary skill-pill">React</span>
-                <span class="badge badge-secondary skill-pill">HTML5</span>
-                <span class="badge badge-secondary skill-pill">CSS3</span>
-                <span class="badge badge-secondary skill-pill">Tailwind CSS</span>
-                <span class="badge badge-secondary skill-pill">DaisyUI</span>
-                <span class="badge badge-secondary skill-pill">Bootstrap</span>
-                <span class="badge badge-secondary skill-pill">jQuery</span>
-                <span class="badge badge-secondary skill-pill">JavaFX</span>
+                <span class="badge badge-warning skill-pill">JavaScript</span>
+                <span class="badge badge-warning skill-pill">Vue.js</span>
+                <span class="badge badge-warning skill-pill">React</span>
+                <span class="badge badge-warning skill-pill">HTML5</span>
+                <span class="badge badge-warning skill-pill">ReactNative</span>
+                <span class="badge badge-warning skill-pill">CSS3</span>
+                <span class="badge badge-warning skill-pill">Tailwind CSS</span>
+                <span class="badge badge-warning skill-pill">DaisyUI</span>
+                <span class="badge badge-warning skill-pill">Bootstrap</span>
+                <span class="badge badge-warning skill-pill">jQuery</span>
+                <span class="badge badge-warning skill-pill">Vue.js</span>
               </div>
             </div>
 
@@ -218,7 +281,6 @@
                 <span class="badge badge-accent skill-pill">SQL Server</span>
                 <span class="badge badge-accent skill-pill">OracleDB</span>
                 <span class="badge badge-accent skill-pill">MariaDB</span>
-                <span class="badge badge-accent skill-pill">JPA</span>
               </div>
             </div>
 
@@ -234,7 +296,7 @@
                 <span class="badge badge-info skill-pill">Linux</span>
                 <span class="badge badge-info skill-pill">Windows</span>
                 <span class="badge badge-info skill-pill">POO</span>
-                <span class="badge badge-warning skill-pill">🦀 Rust</span>
+                <span class="badge badge-warning skill-pill">Rust</span>
               </div>
             </div>
           </div>
@@ -274,7 +336,7 @@
         </section>
 
         <!-- CERTIFICADOS -->
-        <section class="card bg-base-100 shadow-xl">
+        <!-- <section class="card bg-base-100 shadow-xl">
           <div class="card-body p-6">
             <h2 class="card-title text-primary mb-5">
               <i class="fas fa-certificate"></i> Certificados
@@ -291,7 +353,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
 
         <!-- RECOMENDAÇÃO -->
         <section class="card bg-base-100 shadow-xl">
@@ -421,15 +483,14 @@
                     </div>
                   </div>
                   <div class="flex flex-wrap gap-1 mt-3">
-                    <span class="badge badge-sm badge-ghost">Java</span>
-                    <span class="badge badge-sm badge-ghost">Spring Boot</span>
+                    <span class="badge badge-sm badge-ghost">JavaScript</span>
+                    <span class="badge badge-sm badge-ghost">Node.js</span>
+                    <span class="badge badge-sm badge-ghost">Express.js</span>
                     <span class="badge badge-sm badge-ghost">MySQL</span>
-                    <span class="badge badge-sm badge-ghost">JPA</span>
                     <span class="badge badge-sm badge-ghost">POO</span>
                     <span class="badge badge-sm badge-ghost">PHP</span>
                     <span class="badge badge-sm badge-ghost">React</span>
                     <span class="badge badge-sm badge-ghost">Laravel</span>
-                    <span class="badge badge-sm badge-ghost">JavaScript</span>
                     <span class="badge badge-sm badge-ghost">Python</span>
                     <span class="badge badge-sm badge-ghost">PostgreSQL</span>
                     <span class="badge badge-sm badge-ghost">+18 competências</span>
@@ -742,7 +803,7 @@
     <footer class="footer footer-center bg-base-100 rounded-2xl shadow-xl mt-8 p-8">
       <div class="h-1 w-24 bg-gradient-to-r from-primary via-secondary to-accent rounded-full mb-4"></div>
       <p class="text-xl font-extrabold tracking-tight">
-        Nicholas <span class="text-primary">"Nini"</span> Goulart
+        Nicholas Goulart
       </p>
       <p class="text-base-content/50 text-sm">Full-Stack Developer · São Paulo, Brasil</p>
       <div class="flex gap-6 mt-3">
